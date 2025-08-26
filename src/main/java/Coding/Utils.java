@@ -17,4 +17,13 @@ public class Utils {
         public TreeNode(int val) { this.val = val; }
     }
 
+    public static ListNode buildList(int[] nums) {
+        ListNode virtual = new ListNode(), ptr = virtual;
+        for (int num : nums) {
+            ptr.next = new ListNode(num);
+            ptr = ptr.next;
+        }
+        return virtual.next;
+    }
+
 }
